@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-p{
-    color:red;
+body{
+    height: 1000vh;
 }
