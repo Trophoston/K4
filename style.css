@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar { 
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #EF1B17;
+    border-radius: 5px;
+}
+
 body{
     height: 1000vh;
 }
