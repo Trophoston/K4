@@ -12,3 +12,10 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
+?>
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/027e1ff7fd.js" crossorigin="anonymous"></script>

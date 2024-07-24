@@ -84,23 +84,53 @@ require_once "./config/conn.php";
 
         ?>
 
-        <p>ลงชื่อเข้าใช้งาน</p>
+        <p class="text-[55px]  my-6">ลงชื่อเข้าใช้งาน</p>
 
-        <form method="post" action="" class="flex flex-col items-center">
+        <form method="post" action="" class="flex flex-col items-center gap-5 w-screen sm:w-auto px-4">
 
-            <input type="text" placeholder="เบอร์โทร หรือ อีเมล์" name="login" class="w-60 h-12 border-4">
-            <div>
-                <input type="password" id="" placeholder="รหัสผ่าน" name="password" class="w-60 h-12 border-4">
-                <a href="#">ลืมรหัสผ่าน?</a>
+            <input type="text" placeholder="เบอร์โทร หรือ อีเมล์" name="login" class="w-full sm:w-[500px]  rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
+            <div class="relative flex pb-8 w-screen sm:w-full">
+                <div class="relative flex items-center w-screen sm:w-full mx-4">
+                    <input type="password" id="password-field" placeholder="รหัสผ่าน" name="password" class="form-control w-full sm:w-[500px] rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
+                    <span toggle="#password-field" class="absolute fa-solid fa-eye fa-2xl toggle-password end-0 pe-4 "></span>
+                </div>
+                <a href="#" class="absolute end-0 bottom-0 pe-4">ลืมรหัสผ่าน?</a>
             </div>
 
-            <input type="submit" style="border: 2px solid #000" name="submit" value="เข้าสู่ระบบ">
+            <input type="submit" name="submit" value="เข้าสู่ระบบ" class="w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-12 text-xl border-none hover:bg-[#89191B] duration-300 bg-[#FF0000] drop-shadow-lg text-white text-shadow-lg ">
         </form>
 
-        <div>
-
+        <div class="flex items-center justify-center my-4 w-full px-8">
+            <div class="border-2 border-black w-[500px]   h-[1px]"></div>
+            <p class="text-xl m-2">หรือ</p>
+            <div class="border-2 border-black w-[500px]  h-[1px]"></div>
         </div>
+
+        <div class="px-4 w-screen sm:w-auto">
+            <a href="" class=" flex items-center w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-12 text-xl border-none hover:scale-105 duration-300 bg-[#fff] drop-shadow-md text-black  ">
+                <img src="./src/svg/google.png" class="h-full px-2" alt=""> เข้าสู่ระบบด้วย Google
+            </a>
+            <a href="" class="flex items-center  w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-4 text-xl border-none hover:scale-105 duration-300 bg-[#00ff] drop-shadow-lg text-white  ">
+                <i class="fab fa-facebook  fa-xl px-2"></i> เข้าสู่ระบบด้วย Facebook
+            </a>
+        </div>
+
     </div>
+
+
+    <script>
+        //แสดงรหัสผ่าน
+        document.querySelector('.toggle-password').addEventListener('click', function() {
+            this.classList.toggle('fa-eye');
+            this.classList.toggle('fa-eye-slash');
+            const passwordField = document.querySelector(this.getAttribute('toggle'));
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+            } else {
+                passwordField.type = 'password';
+            }
+        });
+    </script>
 
 </body>
 
