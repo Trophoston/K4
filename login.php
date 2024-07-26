@@ -132,6 +132,8 @@ require_once "./config/conn.php";
         });
     </script>
 
+<?php include_once("./components/foot.php")?>
+
 </body>
 
 </html>

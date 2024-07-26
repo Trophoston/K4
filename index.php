@@ -24,9 +24,80 @@ require_once("./config/conn.php");
   <?php include_once("./components/banner.php")?>
 </div>
 
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>  <i class="fa-solid fa-bars"></i><i  class="toggle-nav  fa-solid fa-bars fa-2xl end-0 pe-4 "></i>
+<div class="flex justify-center mt-6 w-full px-6">
+  <div class="w-full flex flex-col items-center">
+
+    <div class="bg-[#B51B1E] rounded-t-2xl mb-[-1px] flex items-center justify-center w-48 h-8 text-xl text-white">
+      <p>ข่าวสารและกิจกรรม</p>
+    </div>
+
+    <div class="bg-[#B51B1E] rounded-3xl w-full p-6 text-white ">
+
+      <div class="flex  flex-wrap lg:gap-0 gap-4">
+        <div class="lg:w-2/5 w-full overflow-hidden rounded-xl">
+          <img src="./src/content/content1.jpg" class="h-full  object-cover" alt="">
+        </div>
+        <div class="lg:w-3/5 w-auto lg:ps-14">
+          <p class="text-[45px] text-bold ">ทำแบบสอบถามได้รับรางวัล X2 !!</p>
+          <p class="font-thin text-xl text-pretty">ฉลองวันเปิดเว็บไซต์ร่วมกิจกรรมทำแบบสอบถามภายในหัวข้อ “ซิม K4 คืออะไร” รับพอย์ท 2 เท่า !! </p>
+          <p class="font-thin text-sm">ช่วงเวลากิจกรรมตั้งแต่ 13/13/2569 สิ้นสุด 13/13/2570</p>
+          <a href="#" class="bg-[#E13835] hover:bg-[#972a28] duration-300 p-3 my-2 drop-shadow-lg inline-block rounded-xl" >เริ่มทำแบบสอบถาม</a>
+
+        </div>
+      </div>
+
+      <p class="border-[1px] text-[35px] p-1 my-6 rounded-xl drop-shadow-md bg-[#B61C1F] "><i class="fa-solid fa-gift px-2"></i>สะสมแต้มแลกของรางวัลเลย !</p>
+
+    <div class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4">
+    
+    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
+        <div class="overflow-hidden rounded-t-xl ">
+          <img src="./src/content/content2.jpg" alt="">
+        </div>
+        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (1)</p>
+      </a>
+
+      <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
+        <div class="overflow-hidden rounded-t-xl ">
+          <img src="./src/content/content2.jpg" alt="">
+        </div>
+        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (2)</p>
+      </a>
+
+      <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
+        <div class="overflow-hidden rounded-t-xl ">
+          <img src="./src/content/content2.jpg" alt="">
+        </div>
+        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (3)</p>
+      </a>
+
+      <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
+        <div class="overflow-hidden rounded-t-xl ">
+          <img src="./src/content/content2.jpg" alt="">
+        </div>
+        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (4)</p>
+      </a>
+
+      <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] "> <!-- Use olny 1:1 image -->
+        <div class="overflow-hidden rounded-t-xl ">
+          <img src="./src/content/content3.jpg" class="" alt="">
+        </div>
+        <p class="text-center p-2">ตอบคำถาม ระบบตัวแทน K4</p>
+      </a>
+
+
+    </div>
+
+    </div>
+
+  </div>
+
+</div>
+  
+<div>
+  <?php include_once("./components/foot.php")?>
+</div>
+
 
 </body>
 </html>

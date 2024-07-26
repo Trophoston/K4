@@ -68,7 +68,7 @@ require_once "./config/conn.php";
 
     ?>
 
-    <div class="flex flex-col items-center">
+    <div class="flex flex-col items-center ">
 
         <p class="text-[50px]  my-6">สมัครสมาชิก</p>
 
@@ -119,6 +119,8 @@ require_once "./config/conn.php";
         });
     </script>
     </div>
-</body>
 
+    <?php include_once("./components/foot.php")?>
+
+</body>
 </html>

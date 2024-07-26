@@ -15,11 +15,15 @@ body,html {
     width: 5px;
 }
 
+::-webkit-scrollbar-track {
+    background-color: #943e3e;
+}
+
 ::-webkit-scrollbar-thumb{
     background-color: #EF1B17;
     border-radius: 5px;
 }
 
 body{
-    height: 1000vh;
+    height: 10vh;
 }
