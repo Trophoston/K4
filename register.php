@@ -70,7 +70,7 @@ require_once "./config/conn.php";
 
     <div class="flex flex-col items-center">
 
-        <p class="text-[55px]  my-6">สมัครสมาชิก</p>
+        <p class="text-[50px]  my-6">สมัครสมาชิก</p>
 
         <form method="post" action="" class="flex flex-col items-center gap-5 w-screen sm:w-auto px-4">
 
@@ -88,13 +88,13 @@ require_once "./config/conn.php";
         </form>
 
         <div class="flex items-center justify-center my-4 w-full px-8">
-            <div class="border-2 border-black w-[500px]   h-[1px]"></div>
+            <div class="border-[1px] border-black w-[500px]   h-[1px]"></div>
             <p class="text-xl m-2">หรือ</p>
-            <div class="border-2 border-black w-[500px]  h-[1px]"></div>
+            <div class="border-[1px] border-black w-[500px]  h-[1px]"></div>
         </div>
 
         <div class="px-4 w-screen sm:w-auto">
-            <a href="" class=" flex items-center w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-12 text-xl border-none hover:scale-105 duration-300 bg-[#fff] drop-shadow-md text-black  ">
+            <a href="" class=" flex items-center w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-3 text-xl border-none hover:scale-105 duration-300 bg-[#fff] drop-shadow-md text-black  ">
                 <img src="./src/svg/google.png" class="h-full px-2" alt=""> เข้าสู่ระบบด้วย Google
             </a>
             <a href="" class="flex items-center  w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-4 text-xl border-none hover:scale-105 duration-300 bg-[#00ff] drop-shadow-lg text-white  ">

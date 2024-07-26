@@ -21,16 +21,14 @@ if (isset($_SESSION['user_id'])) {
       transition: transform 0.3s;
     }
   </style>
-
-  <div class="flex flex-col ">
+    
     <div class=" min-[960px]:hidden relative">
-      <!-- Mobile menu button-->
       
       <i  class="toggle-nav text-white  fa-solid fa-bars fa-2xl end-0 pe-4  "></i>
 
     </div>
 
-    <div class=" flex relative end-0  gap-6 hidden sidenav bg-[#EF1B17]">
+    <div class=" flex ms-[-10px] mt-[335px] absolute gap-6 hidden sidenav bg-[#EF1B17] rounded-lg z-50">
         <a href="./" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
           <img src="./src/svg/house-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
           <p class="text-white text-2xl ">หน้าหลัก</p>
@@ -52,7 +50,28 @@ if (isset($_SESSION['user_id'])) {
         </a>
     </div>
     
-  </div>
+
+  <!-- <div class=" flex relative end-0  gap-6 hidden sidenav bg-[#EF1B17]">
+        <a href="./" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+          <img src="./src/svg/house-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
+          <p class="text-white text-2xl ">หน้าหลัก</p>
+        </a>
+
+        <a href="" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+          <img src="./src/svg/gift-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
+          <p class="text-white text-2xl ">แลกรางวัล</p>
+        </a>
+
+        <a href="" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+          <img src="./src/svg/gifts-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
+          <p class="text-white text-2xl  ">ล็อกอินรายวัน</p>
+        </a>
+
+        <a href="" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+          <img src="./src/svg/clipboard-question-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
+          <p class="text-white text-2xl  ">ทำแบบสอบถาม</p>
+        </a>
+    </div> -->
 
   <div class="block flex gap-6 max-[960px]:hidden ">
     <a href="./" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
@@ -77,7 +96,7 @@ if (isset($_SESSION['user_id'])) {
   </div>
 
   <?php if ($userid != null) { ?>
-    <div class="absolute end-0 me-2"> <!--Dropdown-->
+    <div class="absolute end-0 me-2 pfdd"> <!--Dropdown-->
       <div class="relative inline-block text-left">
         <div>
           <button type="button" class="p-1 bg-white rounded-full relative" id="menu-button" aria-expanded="false" aria-haspopup="true">
@@ -121,7 +140,7 @@ if (isset($_SESSION['user_id'])) {
       </div>
     </div>
   <?php } else { ?>
-    <div class="absolute end-0 me-2"> <!--Dropdown-->
+    <div class="absolute end-0 me-2 pfdd"> <!--Dropdown-->
       <div class="relative inline-block text-left">
         <div>
           <button type="button" class="p-1 bg-white rounded-full relative" id="menu-button" aria-expanded="false" aria-haspopup="true">
@@ -150,41 +169,62 @@ if (isset($_SESSION['user_id'])) {
 
 
   <script>
-    document.addEventListener('DOMContentLoaded', (event) => { //nav bar dropdown animation&code
-      const menuButton = document.getElementById('menu-button');
-      const dropdownMenu = document.getElementById('dropdown-menu');
-      const chevronIcon = document.querySelector('.chevron-icon');
+   document.addEventListener('DOMContentLoaded', (event) => { 
+    // nav bar dropdown animation & code
+    const menuButton = document.getElementById('menu-button');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const chevronIcon = document.querySelector('.chevron-icon');
 
-      menuButton.addEventListener('click', () => {
+    menuButton.addEventListener('click', () => {
         const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
         menuButton.setAttribute('aria-expanded', !isExpanded);
         dropdownMenu.classList.toggle('hidden');
         chevronIcon.classList.toggle('rotate-180');
-      });
-
-      document.addEventListener('click', (event) => {
-        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-          menuButton.setAttribute('aria-expanded', 'false');
-          dropdownMenu.classList.add('hidden');
-          chevronIcon.classList.remove('rotate-180');
-        }
-      });
     });
-  </script>
+});
 
-     <script>
-        //แสดงรหัสผ่าน
-        document.querySelector('.toggle-nav').addEventListener('click', function() {
-            this.classList.toggle('fa-xmark');
-            this.classList.toggle('fa-bars');
-            const sidenav = document.querySelector('.sidenav');
-            if (sidenav.style.display === 'block') {
-                sidenav.style.display = 'none';
-            } else {
-                sidenav.style.display = 'block';
-            }
-        });
+document.addEventListener('click', (event) => {
+    const menuButton = document.getElementById('menu-button');
+    const dropdownMenu = document.getElementById('dropdown-menu');
+    const pfdd = document.querySelector('.pfdd');
+    const chevronIcon = document.querySelector('.chevron-icon');
 
-        
-    </script>
+    // Ensure all elements are found
+    if (menuButton && dropdownMenu && pfdd && chevronIcon) {
+        if (!menuButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            menuButton.setAttribute('aria-expanded', 'false');
+            dropdownMenu.classList.add('hidden');
+            chevronIcon.classList.remove('rotate-180');
+        }
+    }
+});
+
+</script>
+
+<script>
+    // Toggle the sidenav and the icon
+    document.querySelector('.toggle-nav').addEventListener('click', function(event) {
+        event.stopPropagation(); // Prevent click event from propagating to the document
+        this.classList.toggle('fa-xmark');
+        this.classList.toggle('fa-bars');
+        const sidenav = document.querySelector('.sidenav');
+        if (sidenav.style.display === 'block') {
+            sidenav.style.display = 'none';
+        } else {
+            sidenav.style.display = 'block';
+        }
+    });
+
+    // Close the sidenav when clicking outside of it
+    document.addEventListener('click', (event) => {
+        const sidenav = document.querySelector('.sidenav');
+        const toggleNav = document.querySelector('.toggle-nav');
+        if (sidenav.style.display === 'block' && !sidenav.contains(event.target) && !toggleNav.contains(event.target)) {
+            sidenav.style.display = 'none';
+            toggleNav.classList.remove('fa-xmark');
+            toggleNav.classList.add('fa-bars');
+        }
+    });
+</script>
+
 </nav>
