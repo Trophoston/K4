@@ -41,10 +41,10 @@ $user_point = 6969;
                 <p class="border-[1px] text-[35px] p-1 ps-4 mb-6 rounded-xl drop-shadow-md bg-[#B61C1F] ">
                     พอยท์สะสม&nbsp;<?= $user_point ?> : point</p>
 
-                <div class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-12 px-24 text-black">
+                <div class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6 xl:gap-12 px-8 md:px-18 text-black">
 
                     <?php
-                     for ($i = 0; $i <= 10; $i++)
+                     for ($i = 0; $i <= 6; $i++)
                         {echo('
                             <div href="#" class=" rounded-3xl bg-[#fff] p-4 ">
                                 <div class="overflow-hidden rounded-2xl ">
@@ -52,7 +52,7 @@ $user_point = 6969;
                                 </div>
                                 <p class="text-center p-2 text-2xl font-bold">ซิม K4 (คละเบอร์)</p>
                                 <p class="text-center text-xs font-thin">500 Point | เหลือ 50 ชิ้น</p>
-                                <a href="#" class="bg-[#E13835] hover:bg-[#972a28] duration-300 p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >เริ่มทำแบบสอบถาม</a>
+                                <a href="#" class="bg-[#f00] hover:bg-[#c00] duration-300 p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >แลกสินค้า</a>
                             </div>       
                         ');
                         } 
@@ -63,11 +63,11 @@ $user_point = 6969;
                         {echo('
                             <div  href="#" class=" rounded-3xl bg-[#fff] p-4 brightness-50">
                                 <div class="overflow-hidden rounded-2xl ">
-                                    <img src="./src/content/content4.jfif" alt="">
+                                    <img  src="./src/content/content4.jfif" alt="">
                                 </div>
                                 <p class="text-center p-2 text-2xl font-bold">ซิม K4 (คละเบอร์)</p>
-                                <p class="text-center text-xs font-thin">500 Point | เหลือ 50 ชิ้น</p>
-                                <p class="bg-[#E13835] p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >เริ่มทำแบบสอบถาม</a>
+                                <p class="text-center text-xs font-thin">10000 Point | เหลือ 50 ชิ้น</p>
+                                <p class="bg-[#f00] p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >พอยท์ของท่านไม่เพียงพอ</a>
                             </div>       
                         ');
                         } 
