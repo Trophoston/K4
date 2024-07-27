@@ -41,44 +41,37 @@ $user_point = 6969;
                 <p class="border-[1px] text-[35px] p-1 ps-4 mb-6 rounded-xl drop-shadow-md bg-[#B61C1F] ">
                     พอยท์สะสม&nbsp;<?= $user_point ?> : point</p>
 
-                <div class="grid lg:grid-cols-5 md:grid-cols-3 grid-cols-2 gap-4">
+                <div class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-12 px-24 text-black">
 
-                    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
-                        <div class="overflow-hidden rounded-t-xl ">
-                            <img src="./src/content/content2.jpg" alt="">
-                        </div>
-                        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (1)</p>
-                    </a>
+                    <?php
+                     for ($i = 0; $i <= 10; $i++)
+                        {echo('
+                            <div href="#" class=" rounded-3xl bg-[#fff] p-4 ">
+                                <div class="overflow-hidden rounded-2xl ">
+                                    <img src="./src/content/content4.jfif" alt="">
+                                </div>
+                                <p class="text-center p-2 text-2xl font-bold">ซิม K4 (คละเบอร์)</p>
+                                <p class="text-center text-xs font-thin">500 Point | เหลือ 50 ชิ้น</p>
+                                <a href="#" class="bg-[#E13835] hover:bg-[#972a28] duration-300 p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >เริ่มทำแบบสอบถาม</a>
+                            </div>       
+                        ');
+                        } 
+                    ?>
 
-                    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
-                        <div class="overflow-hidden rounded-t-xl ">
-                            <img src="./src/content/content2.jpg" alt="">
-                        </div>
-                        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (2)</p>
-                    </a>
-
-                    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
-                        <div class="overflow-hidden rounded-t-xl ">
-                            <img src="./src/content/content2.jpg" alt="">
-                        </div>
-                        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (3)</p>
-                    </a>
-
-                    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
-                        <div class="overflow-hidden rounded-t-xl ">
-                            <img src="./src/content/content2.jpg" alt="">
-                        </div>
-                        <p class="text-center p-2">ตอบคำถามเกี่ยวกับ K4 (4)</p>
-                    </a>
-
-                    <a href="#" class="hover:scale-105 hover duration-300  rounded-xl bg-[#972a28] ">
-                        <!-- Use olny 1:1 image -->
-                        <div class="overflow-hidden rounded-t-xl ">
-                            <img src="./src/content/content3.jpg" class="" alt="">
-                        </div>
-                        <p class="text-center p-2">ตอบคำถาม ระบบตัวแทน K4</p>
-                    </a>
-
+                    <?php
+                     for ($i = 0; $i <= 3; $i++)
+                        {echo('
+                            <div  href="#" class=" rounded-3xl bg-[#fff] p-4 brightness-50">
+                                <div class="overflow-hidden rounded-2xl ">
+                                    <img src="./src/content/content4.jfif" alt="">
+                                </div>
+                                <p class="text-center p-2 text-2xl font-bold">ซิม K4 (คละเบอร์)</p>
+                                <p class="text-center text-xs font-thin">500 Point | เหลือ 50 ชิ้น</p>
+                                <p class="bg-[#E13835] p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >เริ่มทำแบบสอบถาม</a>
+                            </div>       
+                        ');
+                        } 
+                    ?>
 
                 </div>
 
