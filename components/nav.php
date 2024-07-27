@@ -7,6 +7,8 @@ if (isset($_SESSION['user_id'])) {
   $userid = null;
 }
 
+$user_point = 6969;
+
 ?>
 
 <nav class="h-[65px] bg-[#EF1B17] flex justify-center max-[960px]:justify-start items-center px-4 border border-0  rounded-b-3xl drop-shadow-lg fixed start-0 end-0 z-50">
@@ -34,7 +36,7 @@ if (isset($_SESSION['user_id'])) {
           <p class="text-white text-2xl ">หน้าหลัก</p>
         </a>
 
-        <a href="" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+        <a href="<?= $register_link ?>" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
           <img src="./src/svg/gift-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
           <p class="text-white text-2xl ">แลกรางวัล</p>
         </a>
@@ -79,7 +81,7 @@ if (isset($_SESSION['user_id'])) {
       <p class="text-white text-2xl max-[960px]:hidden ">หน้าหลัก</p>
     </a>
 
-    <a href="" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
+    <a href="<?= $register_link ?>" class="flex items-center rounded-b-lg h-[65px] px-2 duration-200 hover:bg-[#89191B]">
       <img src="./src/svg/gift-solid.svg" class="w-[40px] h-[40px] me-2" alt="">
       <p class="text-white text-2xl max-[960px]:hidden ">แลกรางวัล</p>
     </a>
@@ -115,7 +117,7 @@ if (isset($_SESSION['user_id'])) {
 
             <p class="text-center text-white mx-2 py-1 my-0.5 border-b border-white">พอยท์สะสม : 990 pts</p>
 
-            <a href="#" class="flex block items-center px-4 py-2 text-sm text-white hover:bg-[#EF1B17] duration-100" role="menuitem" tabindex="-1" id="menu-item-1">
+            <a href="<?= $register_link ?>" class="flex block items-center px-4 py-2 text-sm text-white hover:bg-[#EF1B17] duration-100" role="menuitem" tabindex="-1" id="menu-item-1">
               <img src="./src/svg/gift-solid.svg " class="w-[25px] h-[25px] me-2" alt="">
               <p class="text-lg m-0 p-0">แลกของรางวัล</p>
             </a>
