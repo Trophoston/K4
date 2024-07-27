@@ -38,7 +38,7 @@ $user_point = 6969;
 
             <div class="bg-[#B51B1E] rounded-3xl w-full p-6 text-white ">
 
-                <p class="border-[1px] text-[35px] p-1 ps-4 mb-6 rounded-xl drop-shadow-md bg-[#B61C1F] ">
+                <p class="border-[1px] text-2xl sm:text-[35px] sm:p-3 p-2 ps-4 mb-6 rounded-xl drop-shadow-md bg-[#B61C1F] ">
                     พอยท์สะสม&nbsp;<?= $user_point ?> : point</p>
 
                 <div class="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-1 sm:grid-cols-2 gap-6 xl:gap-12 px-8 md:px-18 text-black">
