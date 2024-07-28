@@ -1,5 +1,7 @@
 <?php
+
 require_once "./config/conn.php";
+
 ?>
 
 <!doctype html>
@@ -74,14 +76,14 @@ require_once "./config/conn.php";
 
         <form method="post" action="" class="flex flex-col items-center gap-5 w-screen sm:w-auto px-4">
 
-            <input type="tel" pattern="[0-9]{0-9}{0-9}-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" placeholder="เบอร์โทร" name="phone" class="w-full sm:w-[500px]  rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
-            <input type="email" placeholder="อีเมล์" name="email" class="w-full sm:w-[500px]  rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
+            <input type="tel" required pattern="[0-9]{0-9}{0-9}-[0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]" placeholder="เบอร์โทร" name="phone" class="w-full sm:w-[500px]  rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
+            <input type="email" required placeholder="อีเมล์" name="email" class="w-full sm:w-[500px]  rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
             <div class="relative flex pb-8 w-screen sm:w-full">
                 <div class="relative flex items-center w-screen sm:w-full mx-4">
-                    <input type="password" id="password-field" placeholder="รหัสผ่าน" name="password" class="form-control w-full sm:w-[500px] rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
+                    <input type="password" required id="password-field" placeholder="รหัสผ่าน" name="password" class="form-control w-full sm:w-[500px] rounded-xl h-16 p-4 text-xl border-2 border-[#FF0000] drop-shadow-lg">
                     <span toggle="#password-field" class="absolute fa-solid fa-eye fa-2xl toggle-password end-0 pe-4 "></span>
                 </div>
-                <p class="absolute end-0 bottom-0 pe-4">มีบัญชีอยู่แล้ว?<a href="#" class="text-[#f00]"> ล็อกอิน</a></p>
+                <p class="absolute end-0 bottom-0 pe-4">มีบัญชีอยู่แล้ว?<a href="./login.php" class="text-[#f00]"> ล็อกอิน</a></p>
             </div>
 
             <input type="submit" name="submit" value="สมัครสมาชิก" class="w-full sm:w-[500px]  rounded-2xl h-16 p-4 mt-12 text-xl border-none hover:bg-[#89191B] duration-300 bg-[#FF0000] drop-shadow-lg text-white text-shadow-lg ">

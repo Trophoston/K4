@@ -52,7 +52,7 @@ $user_point = 6969;
                                 </div>
                                 <p class="text-center p-2 text-2xl font-bold">ซิม K4 (คละเบอร์)</p>
                                 <p class="text-center text-xs font-thin">500 Point | เหลือ 50 ชิ้น</p>
-                                <a href="#" class="bg-[#f00] hover:bg-[#c00] duration-300 p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >แลกสินค้า</a>
+                                <a href="./reward_claim.php" class="bg-[#f00] hover:bg-[#c00] duration-300 p-3 mt-2 shadow-md inline-block rounded-xl w-full text-center text-white" >แลกสินค้า</a>
                             </div>       
                         ');
                         } 
